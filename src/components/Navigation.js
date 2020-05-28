@@ -1,6 +1,6 @@
-import NavBar from './NavBar/NavBarLanding/NavBarLanding';
+import NavBar from './NavBar/NavBar';
 import Backdrop from './Backdrop/Backdrop';
-import SideNavigation from './NavBar/NavBarLanding/SideNavigation/SideNavigation';
+import SideNavigation from './NavBar/SideNavigation/SideNavigation';
 import { useState } from 'react';
 
 const Navigation = () => {
