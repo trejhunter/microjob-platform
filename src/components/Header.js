@@ -1,3 +1,3 @@
-const Header = () => <div> HEADER </div>;
+const Header = () => <div className='container'> </div>;
 
 export default Header;

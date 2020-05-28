@@ -1,9 +1,11 @@
 import Layout from '../components/Layout';
 
-const LandingPage = () => (
+const HomePage = () => (
   <Layout>
-    <h1> Landing Page .... </h1>
+    <div className='container'>
+      <h1 style={{ textAlign: 'center' }}> Landing Page .... </h1>
+    </div>
   </Layout>
 );
 
-export default LandingPage;
+export default HomePage;

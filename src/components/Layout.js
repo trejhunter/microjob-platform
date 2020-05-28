@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import NavBar from './NavBar/NavBarLanding';
 import Header from './Header';
+import Navigation from './Navigation';
 
 const Layout = (props) => (
-  <div>
+  <div style={{ height: '100%' }}>
     <Head>
       <title>Go Missioned</title>
       <link
@@ -11,8 +11,7 @@ const Layout = (props) => (
         href='https://bootswatch.com/4/flatly/bootstrap.min.css'
       />
     </Head>
-
-    <NavBar />
+    <Navigation />
     <Header />
     <div>{props.children}</div>
   </div>
