@@ -14,7 +14,7 @@ const NavBar = (props) => (
 
           <div className='toolbar_logo'>
             <Link href='/'>
-              <a>GO MISSIONED</a>
+              <a>MICRO JOB PLATFORM</a>
             </Link>
           </div>
 

@@ -5,7 +5,7 @@ import Navigation from './Navigation';
 const Layout = (props) => (
   <div style={{ height: '100%' }}>
     <Head>
-      <title>Go Missioned</title>
+      <title>Micro Job Platform</title>
       <link
         rel='stylesheet'
         href='https://bootswatch.com/4/flatly/bootstrap.min.css'
