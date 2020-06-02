@@ -1,7 +1,7 @@
 import nextConnect from 'next-connect';
-import dbConnect from '../../../utils/dbConnect';
+import dbConnect from '../../../../utils/dbConnect';
 import passport from 'passport';
-import passportConfig from '../../../utils/passport';
+import passportConfig from '../../../../utils/passport';
 import JWT from 'jsonwebtoken';
 import { serialize } from 'cookie';
 
@@ -23,22 +23,20 @@ handler
     dbConnect();
     next();
   })
-  .use(passport.authenticate('local', { session: false }))
+  .use(passport.authenticate('google-token', { session: false }))
   .post((req, res) => {
     if (req.isAuthenticated()) {
-      // A console.log for checks
       console.log(req.user);
       const {
         _id,
-        local: { email },
-        role,
+        google: { email },
       } = req.user;
       const token = signToken(_id);
       res.setHeader(
         'Set-Cookie',
         serialize('access_token', token, { httpOnly: true, sameSite: true })
       );
-      res.status(200).json({ isAuthenticated: true, user: { email, role } });
+      res.status(200).json({ isAuthenticated: true, user: { email } });
     }
   });
 

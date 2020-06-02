@@ -5,12 +5,10 @@ import Navigation from './Navigation';
 const Layout = (props) => (
   <div style={{ height: '100%' }}>
     <Head>
-      <title>Micro Job Platform</title>
-      <link
-        rel='stylesheet'
-        href='https://bootswatch.com/4/flatly/bootstrap.min.css'
-      />
+      <title>MicroJob Platform</title>
+      {/* <link rel='stylesheet' href='/bootstrap.min.css' /> */}
     </Head>
+
     <Navigation />
     <Header />
     <div>{props.children}</div>

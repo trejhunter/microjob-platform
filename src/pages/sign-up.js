@@ -1,5 +1,10 @@
+import Register from '../components/Register';
+import Layout from '../components/Layout';
+
 const SignUp = () => (
-  <h1 style={{ textAlign: 'center' }}> This is the sign up page </h1>
+  <Layout>
+    <Register />
+  </Layout>
 );
 
 export default SignUp;

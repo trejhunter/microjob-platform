@@ -1,5 +1,10 @@
+import Login from '../components/Login';
+import Layout from '../components/Layout';
+
 const LogIn = () => (
-  <h1 style={{ textAlign: 'center' }}> This is the log in page </h1>
+  <Layout>
+    <Login />
+  </Layout>
 );
 
 export default LogIn;

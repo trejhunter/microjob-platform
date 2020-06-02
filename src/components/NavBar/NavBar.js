@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import AuthService from '../../context/AuthContext';
+import AuthService from '../../helper-functions/AuthService';
 import { AuthContext } from '../../context/AuthContext';
 import { useContext } from 'react';
 import './NavBar.css';
 import './SideNavigation/HamburgerButton';
 import HamburgerButton from './SideNavigation/HamburgerButton';
+import Router from 'next/router';
 
 const NavBar = (props) => {
   const { isAuthenticated, user, setIsAuthenticated, setUser } = useContext(
@@ -16,6 +17,7 @@ const NavBar = (props) => {
       if (data.success) {
         setUser(data.user);
         setIsAuthenticated(false);
+        Router.push('/');
       }
     });
   };
@@ -64,7 +66,7 @@ const NavBar = (props) => {
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='/my-jobs'>
                 <a>My Jobs</a>
               </Link>
             </li>
@@ -108,7 +110,7 @@ const NavBar = (props) => {
 
             <div className='toolbar_logo'>
               <Link href='/'>
-                <a>GO MISSIONED</a>
+                <a>Micro Job Platform</a>
               </Link>
             </div>
 

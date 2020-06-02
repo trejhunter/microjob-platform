@@ -11,8 +11,8 @@ const HomePage = () => {
     if (isAuthenticated) {
       if (user.role === 'organization') {
         return <h1 style={{ textAlign: 'center' }}> Organization Dashboard</h1>;
-      } else if (user.role === 'minister') {
-        return <h1 style={{ textAlign: 'center' }}> Minister Dashboard </h1>;
+      } else if (user.role === 'individual') {
+        return <h1 style={{ textAlign: 'center' }}> Individual Dashboard </h1>;
       }
     } else {
       return <h1 style={{ textAlign: 'center' }}> Landing Page </h1>;

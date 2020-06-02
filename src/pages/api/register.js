@@ -10,8 +10,11 @@ handler
     next();
   })
   .post((req, res) => {
-    const { email, password, role } = req.body;
-    User.findOne({ email }, (err, user) => {
+    const {
+      local: { email, password },
+      role,
+    } = req.body;
+    User.findOne({ 'local.email': email }, (err, user) => {
       if (err) {
         res.status(500).json({
           message: {
@@ -25,7 +28,11 @@ handler
           message: { msgBody: 'Username is already taken', msgError: true },
         });
       } else {
-        const newUser = new User({ email, password, role });
+        const newUser = new User({
+          method: 'local',
+          local: { email, password },
+          role,
+        });
         newUser.save((err) => {
           if (err) {
             res.status(500).json({

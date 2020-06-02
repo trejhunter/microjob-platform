@@ -19,7 +19,20 @@ export default ({ children }) => {
   return (
     <div>
       {!isLoaded ? (
-        <h1>Loading...</h1>
+        <div className='holder'>
+          <div className='preloader'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       ) : (
         <AuthContext.Provider
           value={{ user, setUser, isAuthenticated, setIsAuthenticated }}
